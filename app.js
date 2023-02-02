@@ -6,7 +6,7 @@ const fs=require("fs");
 const path = require('path');
 const data=require('./capital.json');
 const Route=require("./routers/capital");
-mongoose.connect("mongodb+srv://Delena:Delena123@cluster0.tglzo.mongodb.net/keploy")
+mongoose.connect(PROCESS.ENV.DB)
 .then(()=> console.log("DB connection successfull"))
 .catch((err)=>{console.log(err)});
 
