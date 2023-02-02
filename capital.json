@@ -1,0 +1,21 @@
+[
+    {"id":1,
+"country":"India",
+"capital":"New Delhi"},
+
+{"id":2,
+"country":"France",
+"capital":"Paris"},
+
+{"id":3,
+"country":"Germany",
+"capital":"Berlin"},
+
+{"id":4,
+"country":"Poland",
+"capital":"Warsaw"},
+
+{"id":5,
+"country":"Japan",
+"capital":"Tokyo"}
+]
