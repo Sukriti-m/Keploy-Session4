@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: rgb(42, 47, 116);
+        }
+
+        th {
+            font-size: 2em;
+            text-decoration: underline;
+            color: rgb(102, 52, 150);
+        }
+
+        td {
+            font-size: 1.5em;
+            color: wheat;
+        }
+    </style>
+    <title>Capitals</title>
+</head>
+
+<body>
+    <h1>Capitals</h1>
+    <table align="center" cellspacing="50" cellpadding="10">
+        <th>Country</th>
+        <th>Capital</th>
+        <tr class="e1"></tr>
+        <tr class="e2"></tr>
+        <tr class="e3"></tr>
+        <tr class="e4"></tr>
+        <tr class="e5"></tr>
+
+    </table>
+    <script>
+        fetch("localhost:3000/capitals")
+            .then(data => data.json())
+            .then(data => {
+                for (let i = 1; i <= 5; i++) {
+                    document.querySelector(".e" + i).innerHTML = `<td >${data[i].country}</td><td>${data[i].capital}</td> `;
+                }
+            });</script>
+</body>
+
+</html>
