@@ -6,7 +6,7 @@ const fs=require("fs");
 const path = require('path');
 const data=require('./capital.json');
 const Route=require("./routers/capital");
-mongoose.connect(PROCESS.ENV.DB)
+mongoose.connect(process.env.DB)
 .then(()=> console.log("DB connection successfull"))
 .catch((err)=>{console.log(err)});
 
