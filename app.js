@@ -2,9 +2,12 @@ const express=require("express");
 const app=express();
 const fs=require("fs");
 const path = require('path');
-
+const data=require('./capital.json');
+app.set('view engine', 'ejs')
 app.get("/", (req,res)=>{
-    res.sendFile(path.join(__dirname+'/public/index.html'));
+    res.render("index", {
+        data: data
+    })
 
 });
 app.get("/capitals",(req,res)=>{
